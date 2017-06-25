@@ -7,6 +7,7 @@ class Gamepad extends Component {
     layout: XBOX,
 
     stickThreshold: 0.5,
+    deadZone: 0.08,
 
     gamepadIndex: 0,
 
@@ -153,9 +154,13 @@ class Gamepad extends Component {
   }
 
   updateAxis(axisName, originalValue) {
-    if (axisName) {
+    if (axisName && originalValue !== undefined && originalValue !== null && originalValue !== NaN) {
       const invert = axisName[0] === '-'
       let value = originalValue * (invert ? -1 : 1)
+
+      if (Math.abs(value) < this.props.deadZone) {
+        value = 0
+      }
 
       if (invert) axisName = axisName.substr(1)
 

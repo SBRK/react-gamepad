@@ -60,6 +60,7 @@ class App extends Component {
     <Gamepad
       gamepadIndex={Number}
       stickThreshold={Number}
+      deadZone={Number}
       layout={Object}
 
       onConnect={(gamepadIndex) => {}}
@@ -101,6 +102,10 @@ The index of the gamepad to use, from 0 to 4
 #### stickThreshold
 Threshold above which `onUp`, `onDown`,`onLeft`,`onRight` are triggered for the left stick
 **Default: 0.75**
+
+#### deadZone
+Threshold below which the axis values will be rounded to `0.0`
+**Default: 0.08**
 
 #### layout
 Layout to use, from `Gamepad.layouts`. For now, only `Gamepad.layouts.XBOX` exists
