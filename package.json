@@ -1,12 +1,12 @@
 {
   "name": "react-gamepad",
   "author": "SBRK",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Gamepad handler as a React component",
   "main": "lib/index.js",
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/SBRK/react-gamepad.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SBRK/react-gamepad.git"
   },
   "scripts": {
     "build": "rimraf lib && mkdirp lib && babel src/ -d lib/",
