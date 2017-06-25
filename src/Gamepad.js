@@ -10,6 +10,9 @@ class Gamepad extends Component {
 
     gamepadIndex: 0,
 
+    onConnect: () => {},
+    onDisconnect: () => {},
+
     onButtonDown: () => {},
     onButtonUp: () => {},
     onButtonChange: () => {},
@@ -36,9 +39,6 @@ class Gamepad extends Component {
     onDown: () => {},
     onLeft: () => {},
     onRight: () => {},
-
-    onConnect: () => {},
-    onDisconnect: () => {},
   }
 
   constructor(props, context) {
