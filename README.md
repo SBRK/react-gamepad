@@ -1,4 +1,4 @@
-# react-gamepad [[![npm][npm-image]][npm-url]
+# react-gamepad [[![npm][npm-image]][npm-url]]
 
 [npm-image]: https://img.shields.io/npm/v/react-gamepad.svg
 [npm-url]: https://npmjs.org/package/react-gamepad
