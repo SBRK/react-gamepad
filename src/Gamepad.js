@@ -1,8 +1,8 @@
-import { Component } from 'react'
+import React from 'react'
 
 import { XBOX } from './layouts'
 
-class Gamepad extends Component {
+class Gamepad extends React.Component {
   static defaultProps = {
     layout: XBOX,
 
@@ -234,15 +234,7 @@ class Gamepad extends Component {
   }
 
   render() {
-    if (this.props.children) {
-      if (Array.isArray(this.props.children) && this.props.children.length !== 1) {
-        throw (new Error('<Gamepad> should only take one children'))
-      }
-
-      return Array.isArray(this.props.children) ? this.props.children[0] : this.props.children
-    }
-
-    return null
+    return React.Children.only(this.props.children)
   }
 }
 
