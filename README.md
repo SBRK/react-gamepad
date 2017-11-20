@@ -174,3 +174,8 @@ Layout to use, from `Gamepad.layouts`. For now, only `Gamepad.layouts.XBOX` exis
 
 #### onRight
 `onRight()` triggered when the `D Pad Right` button is pressed or the Left Stick is pushed right (above `stickThreshold`).
+
+## Support on Beerpay
+Hey dude! Help me out for a couple of :beers:!
+
+[![Beerpay](https://beerpay.io/SBRK/react-gamepad/badge.svg?style=beer-square)](https://beerpay.io/SBRK/react-gamepad)  [![Beerpay](https://beerpay.io/SBRK/react-gamepad/make-wish.svg?style=flat-square)](https://beerpay.io/SBRK/react-gamepad?focus=wish)
