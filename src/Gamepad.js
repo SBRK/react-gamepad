@@ -40,6 +40,7 @@ class Gamepad extends React.Component {
     onDown: () => {},
     onLeft: () => {},
     onRight: () => {},
+    
   }
 
   constructor(props, context) {
@@ -69,6 +70,8 @@ class Gamepad extends React.Component {
         DPadRight: false,
         DPadDown: false,
         DPadLeft: false,
+
+        ExtraButton: false,
       },
 
       axis: {
@@ -98,8 +101,8 @@ class Gamepad extends React.Component {
     if (!this.mounted) return
 
     const gamepadIndex = this.props.gamepadIndex
-    const gamepads = navigator.getGamepads()
-
+    const gamepads = this.getGamepads(navigator.getGamepads())
+    
     if (gamepads.length && gamepads.length > gamepadIndex && gamepads[gamepadIndex]) {
       const gamepad = gamepads[gamepadIndex]
 
@@ -147,8 +150,6 @@ class Gamepad extends React.Component {
   updateAllAxis(gamepad) {
     for (let i = 0; i < gamepad.axes.length; ++i) {
       let axisName = this.axisIndexToAxisName(i)
-      const value = gamepad.axes[i]
-
       this.updateAxis(axisName, gamepad.axes[i])
     }
   }
@@ -231,6 +232,19 @@ class Gamepad extends React.Component {
     }
 
     return null
+  }
+
+  getGamepads(peripherals) {
+    const gamepads = []
+    for(let i = 0; i < peripherals.length; i++) {
+      if(peripherals[i]){
+        const controllerId = peripherals[i]['id']
+        if(controllerId.indexOf('Unknown Gamepad') === -1) {
+          gamepads.push(peripherals[i])
+        }
+      }
+    }
+    return gamepads
   }
 
   render() {

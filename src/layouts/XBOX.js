@@ -16,6 +16,7 @@ export default {
     'DPadDown',
     'DPadLeft',
     'DPadRight',
+    'ExtraButton'
   ],
   axis: [
     'LeftStickX',
