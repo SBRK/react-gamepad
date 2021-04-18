@@ -134,7 +134,7 @@ class Gamepad extends React.Component {
   updateButton(buttonName, pressed) {
     if (this.padState.buttons[buttonName] === undefined) {
       return
-    } 
+    }
     if (this.padState.buttons[buttonName] !== pressed) {
       this.padState.buttons[buttonName] = pressed
 
@@ -235,7 +235,7 @@ class Gamepad extends React.Component {
   }
 
   render() {
-    return React.Children.only(this.props.children)
+    return this.props.children ?? React.Fragment
   }
 }
 
