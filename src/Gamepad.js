@@ -132,10 +132,7 @@ class Gamepad extends React.Component {
     }
 
     updateButton(buttonName, pressed) {
-        if (this.padState.buttons[buttonName] === undefined) {
-            return
-        }
-        if (this.padState.buttons[buttonName] !== pressed) {
+        if (buttonName && this.padState.buttons[buttonName] && this.padState.buttons[buttonName] !== pressed) {
             this.padState.buttons[buttonName] = pressed
 
             this.props.onButtonChange(buttonName, pressed)
@@ -150,7 +147,7 @@ class Gamepad extends React.Component {
             let axisName = this.axisIndexToAxisName(i)
             const value = gamepad.axes[i]
 
-            this.updateAxis(axisName, gamepad.axes[i])
+            this.updateAxis(axisName, value)
         }
     }
 
@@ -235,7 +232,7 @@ class Gamepad extends React.Component {
     }
 
     render() {
-        return React.Children.only(this.props.children)
+        return this.props.children ?? (<></>) ;
     }
 }
 
