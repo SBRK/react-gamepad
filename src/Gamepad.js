@@ -232,7 +232,7 @@ class Gamepad extends React.Component {
     }
 
     render() {
-        return this.props.children ?? (<></>) ;
+        return this.props.children || React.Fragment ;
     }
 }
 
