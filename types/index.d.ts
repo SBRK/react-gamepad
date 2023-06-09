@@ -43,7 +43,7 @@ export interface Layout {
 }
 
 export interface Props {
-    children: React.ReactElement;
+    children?: React.ReactElement;
 
     /**
      * The index of the gamepad to use, from 0 to 4 Default: 0
