@@ -132,7 +132,7 @@ class Gamepad extends React.Component {
     }
 
     updateButton(buttonName, pressed) {
-        if (buttonName && this.padState.buttons[buttonName] && this.padState.buttons[buttonName] !== pressed) {
+        if (buttonName && this.padState.buttons[buttonName] !== undefined && this.padState.buttons[buttonName] !== pressed) {
             this.padState.buttons[buttonName] = pressed
 
             this.props.onButtonChange(buttonName, pressed)
