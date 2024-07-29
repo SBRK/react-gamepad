@@ -1,7 +1,7 @@
 {
   "name": "react-gamepad",
   "author": "SBRK",
-  "version": "1.0.3",
+  "version": "1.1.2",
   "description": "A Gamepad handler as a React component",
   "main": "lib/index.js",
   "repository": {
@@ -18,11 +18,12 @@
   },
   "devDependencies": {
     "babel-cli": "6.x.x",
-    "babel-preset-es2015": "^6.x.x",
     "babel-plugin-transform-class-properties": "^6.x.x",
+    "babel-preset-es2015": "^6.x.x",
     "babel-preset-stage-0": "^6.x.x",
     "mkdirp": "*",
     "rimraf": "2.x.x"
   },
-  "license": "GPLv3"
+  "license": "GPLv3",
+  "types": "types/index.d.ts"
 }
